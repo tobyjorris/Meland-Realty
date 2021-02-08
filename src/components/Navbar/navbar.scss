@@ -1,7 +1,12 @@
 .navbar {
     margin-bottom: 150px;
     height: 55px;
-    background-color: rgba(123, 173, 132, 1)
+    background: rgba(0, 33, 61, .6);
+    color: rgb(102, 102, 102);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 #contact {
@@ -15,7 +20,7 @@
 
 .navbar-collapse.collapsing,
 .navbar-collapse.show {
-    background-color: rgba(123, 173, 132, 1) !important;
+
 }
 
 .show .link, .collapsing .link {
