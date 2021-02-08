@@ -1,0 +1,56 @@
+.navbar {
+    margin-bottom: 150px;
+    height: 55px;
+    background-color: rgba(123, 173, 132, 1)
+}
+
+#contact {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+    margin: 0 5px 0 5px;
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+}
+
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+    background-color: rgba(123, 173, 132, 1) !important;
+}
+
+.show .link, .collapsing .link {
+    margin: 10px;
+    color: white !important;
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+}
+
+.show .link:hover {
+    border: none;
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.link {
+    color: white !important;
+    margin: 0 5px 0 5px;
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+}
+
+.link:hover, #contact:hover {
+    border-bottom: 1px solid white;
+    padding-bottom: 2px !important;
+}
+
+@media (max-width: 359px) {
+    #brand_text {
+        max-width: 110px;
+        overflow: hidden;
+    }
+}
