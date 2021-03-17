@@ -4,13 +4,54 @@ import { Link } from 'react-scroll'
 import './navbar.scss';
 
 class toolbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            status: "top"
+        }
+    }
+
+    handleScroll() {
+        const scrolled = document.scrollingElement.scrollTop;
+        if (scrolled >= 120) {
+            if (this.state.status !== "scrolled") {
+                this.setState({ status: "scrolled" });
+            }
+        } else {
+            if (this.state.status !== "top") {
+                this.setState({ status: "top" });
+            }
+        }
+    }
+
+    handleBrandClick(event) {
+        event.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    }
+
+    componentDidMount() {
+        document.addEventListener('scroll', this.handleScroll.bind(this));
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('scroll', this.handleScroll)
+    }
+
     render() {
         return (
             <Container fluid>
                 <Row>
-                    <Navbar className="navbar" collapseOnSelect expand="md" fixed="top" >
+                    <Navbar className="navbar" collapseOnSelect expand="md" fixed="top"
+                        style={{
+                            height: this.state.status === "top" ? '80px' : '50px',
+                            backgroundColor: this.state.status === "top" ? "rgba(0, 33, 61, .6)" : "rgba(0, 33, 61, 1)",
+                            opacity: this.state.status === "top" ? "80%" : "100%",
+                            transition: "400ms"
+                    }}
+                    >
                         <Col xs={6}>
-                            <Navbar.Brand id="brand_text" href="/">Meland Real Estate</Navbar.Brand>
+                            <Navbar.Brand id="brand_text" href="/" onClick={this.handleBrandClick.bind(this)}>Meland Real Estate</Navbar.Brand>
                         </Col>
                         <Col>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />

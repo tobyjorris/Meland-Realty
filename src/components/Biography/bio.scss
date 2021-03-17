@@ -1,0 +1,28 @@
+.biography_background {
+  padding: 40px 0;
+  display: block;
+  position: relative;
+}
+
+.biography_background::after {
+  content: '';
+  background-image: url("../../assets/bio_background.jpg");
+  opacity: .15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.biography_container {
+  text-align: start;
+}
+
+
+.bio_pic {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}

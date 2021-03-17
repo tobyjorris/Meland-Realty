@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import image1 from '../../assets/header-pic-1.jpg';
 import image2 from '../../assets/header-photo-2.png';
 import image3 from '../../assets/header-pic-3.jpg';
@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <div className="Header">
-            <img src={images[index]} alt={index} />
+            <img className="slider-image" src={images[index]} alt={index} />
         </div>
         )
 };
