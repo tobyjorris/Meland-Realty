@@ -1,8 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import realtorAPIFetch from "../../utilities/realtorAPIFetch";
 import './propertySearch.scss';
 
 const PropertySearch = () => {
+
     return(
         <Container fluid className="prop-search">
             <Row>
@@ -30,7 +32,7 @@ const PropertySearch = () => {
                     <div>$ Max. Price</div>
                 </Col>
                 <Col>
-                    <Button variant="light" size="lg">Start Search</Button>
+                    <Button variant="light" size="lg" onClick={realtorAPIFetch}>Start Search</Button>
                 </Col>
             </Row>
         </Container>
