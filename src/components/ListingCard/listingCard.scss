@@ -1,0 +1,19 @@
+.listing-card {
+  margin: 10px 0;
+}
+
+.listing-card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.listing-price {
+  color: white;
+  text-align: start;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+}

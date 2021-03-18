@@ -61,6 +61,7 @@ const ContactForm = () => {
                 <Row>
                     <Col xs={6}>
                         <div>Anderson Realty Logo</div>
+                        <div>Meland Realty Logo</div>
                         <div>P: 555-555-5555</div>
                         <div>E: bmeland@andersonrealty.com</div>
                     </Col>
@@ -70,24 +71,24 @@ const ContactForm = () => {
                             <Form.Row>
                                 <Col xs="12" sm="6">
                                     <Form.Group controlId="formGridName">
-                                        <Form.Control placeholder="Name" type="text" name="name" onChange={handleChange}/>
+                                        <Form.Control className="contact-input" placeholder="Name" type="text" name="name" onChange={handleChange}/>
                                     </Form.Group>
                                 </Col>
                                 <Col  xs="12" sm="6">
                                     <Form.Group controlId="formGridNumber">
-                                        <Form.Control placeholder="Email" type="email" name="email" onChange={handleChange}/>
+                                        <Form.Control className="contact-input" placeholder="Email" type="email" name="email" onChange={handleChange}/>
                                     </Form.Group>
                                 </Col>
                             </Form.Row>
                             <Form.Row>
                                 <Col  xs="12" sm="6">
                                     <Form.Group controlId="formGridEmail">
-                                        <Form.Control placeholder="Phone No." type="phone" name="phone" onChange={handleChange}/>
+                                        <Form.Control className="contact-input" placeholder="Phone No." type="phone" name="phone" onChange={handleChange}/>
                                     </Form.Group>
                                 </Col>
                                 <Col  xs="12" sm="6">
                                     <Form.Group controlId="formGridEmail">
-                                        <Form.Control placeholder="Mobile No." type="mo-phone" name="mobile-phone" onChange={handleChange}/>
+                                        <Form.Control className="contact-input" placeholder="Mobile No." type="mo-phone" name="mobile-phone" onChange={handleChange}/>
                                     </Form.Group>
                                 </Col>
                             </Form.Row>
@@ -95,12 +96,12 @@ const ContactForm = () => {
                             <Form.Row>
                                 <Col xs={12} >
                                     <Form.Group controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control placeholder="Message" as="textarea" rows={3} />
+                                        <Form.Control className="contact-input" placeholder="Message" as="textarea" rows={3} />
                                     </Form.Group>
                                 </Col>
                             </Form.Row>
                             <Button variant="light" type="submit" >
-                                Submit
+                                Send Message
                             </Button>
                             <Modal show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
                                 <Modal.Header closeButton>

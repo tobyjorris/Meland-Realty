@@ -1,7 +1,29 @@
 .contactBackground {
   background-color: rgba(0, 33, 61, 1);
+  padding: 35px 0;
 }
 
 .contactForm {
   color: white;
 }
+
+.contact-input {
+  color: white!important;
+  background-color: rgba(0, 0, 0, 0)!important;
+  border: none !important;
+  border-radius: 0!important;
+  border-bottom: 2px solid white!important;
+  box-shadow: none!important;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: white!important;
+}
+
+.input-bottom-border {
+  color: white;
+  background-color: white;
+  padding: 0 30px;
+}
+
+
