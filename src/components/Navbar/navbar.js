@@ -45,9 +45,10 @@ class toolbar extends Component {
                     <Navbar className="navbar" collapseOnSelect expand="md" fixed="top"
                         style={{
                             height: this.state.status === "top" ? '80px' : '50px',
-                            backgroundColor: this.state.status === "top" ? "rgba(0, 33, 61, .6)" : "rgba(0, 33, 61, 1)",
+                            backgroundColor: this.state.status === "top" ? "rgba(0, 33, 61, .8)" : "rgba(0, 33, 61, 1)",
                             opacity: this.state.status === "top" ? "80%" : "100%",
-                            transition: "400ms"
+                            fontSize: this.state.status === "top" ? "25px" : "20px",
+                            transition: "250ms"
                     }}
                     >
                         <Col xs={6}>

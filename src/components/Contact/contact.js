@@ -59,13 +59,13 @@ const ContactForm = () => {
         <Container className="contactBackground" name="contact" fluid>
             <Container className="contactForm">
                 <Row>
-                    <Col xs={6}>
+                    <Col xs={12} sm={6}>
                         <div>Anderson Realty Logo</div>
                         <div>Meland Realty Logo</div>
                         <div>P: 555-555-5555</div>
                         <div>E: bmeland@andersonrealty.com</div>
                     </Col>
-                    <Col xs={6}className="align-self-center flex-column">
+                    <Col xs={12} sm={6} className="align-self-center flex-column">
                         <h2>Send Me a Message</h2>
                         <Form className="form" onSubmit={handleSubmit}>
                             <Form.Row>

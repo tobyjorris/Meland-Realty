@@ -17,7 +17,7 @@ class FeaturedProps extends Component {
     componentDidMount() {
         this.setState({...this.state, isFetching: true})
         getListings().then(response => {
-            console.log(response)
+            console.log(response.data.properties[1])
             this.setState({listings: response.data.properties.map((listing =>
                         <ListingCard key={listing.property_id} data={listing}/>
                 )), isFetching: false});

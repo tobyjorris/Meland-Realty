@@ -2,18 +2,30 @@
   margin: 10px 0;
 }
 
-.listing-card-image {
-  height: 100%;
-  width: 100%;
-  object-fit: fill;
+.card-img-top {
+  width: 100%!important;
+  height: 20vw!important;
+  object-fit: cover!important;
 }
 
 .listing-price {
   color: white;
   text-align: start;
-  background-color: black;
+  background-color: rgba(0, 33, 61, 1);
   position: absolute;
   top: 0;
   left: 0;
   padding: 5px;
+}
+
+.listing-button {
+  background-color: rgba(0, 33, 61, 1)!important;
+  box-shadow: rgba(0, 33, 61, .5)!important;
+  border: none!important;
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 50vw!important;
+  }
 }

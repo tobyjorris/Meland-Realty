@@ -1,8 +1,6 @@
 .navbar {
     margin-bottom: 150px;
     height: 55px;
-    background: rgba(0, 33, 61, .6);
-    color: rgb(102, 102, 102);
     position: fixed;
     top: 0;
     left: 0;
@@ -11,16 +9,10 @@
 
 #brand_text {
     color: white;
+    font-size: 25px;
 }
 
-#contact {
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: white;
-    margin: 0 5px 0 5px;
-    padding-bottom: 3px !important;
-    padding-top: 3px !important;
-}
+
 
 .navbar-collapse.collapsing,
 .navbar-collapse.show {

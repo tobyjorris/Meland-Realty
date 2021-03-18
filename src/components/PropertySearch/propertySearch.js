@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import realtorAPIFetch from "../../utilities/realtorAPIFetch";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import './propertySearch.scss';
 
 const PropertySearch = () => {
@@ -14,25 +13,45 @@ const PropertySearch = () => {
             </Row>
             <Row>
                 <Col>
-                    <div>City or ZIP Code</div>
-                </Col>
-                <Col>
-                    <div>Property Type</div>
-                </Col>
-                <Col>
-                    <div>Beds</div>
-                </Col>
-                <Col>
-                    <div>Baths</div>
-                </Col>
-                <Col>
-                    <div>$ Min. Price</div>
-                </Col>
-                <Col>
-                    <div>$ Max. Price</div>
-                </Col>
-                <Col>
-                    <Button variant="light" size="lg" onClick={realtorAPIFetch}>Start Search</Button>
+                    <Form className="form" onSubmit={'/'}>
+                        <Form.Row>
+                            <Col sm={12} md={2}>
+                                <Form.Group controlId="formGridName">
+                                    <Form.Control className="search-input" placeholder="City or ZIP Code" type="text" name="city" onChange={"/"}/>
+                                </Form.Group>
+                            </Col>
+                            <Col sm={12} md={2}>
+                                <Form.Group controlId="formGridName">
+                                    <Form.Control className="search-input" placeholder="Property Type" type="text" name="type" onChange={"/"}/>
+                                </Form.Group>
+                            </Col>
+                            <Col sm={6} md={1}>
+                                <Form.Group controlId="formGridName">
+                                    <Form.Control className="search-input" placeholder="Beds" type="text" name="beds" onChange={"/"}/>
+                                </Form.Group>
+                            </Col>
+                            <Col sm={6} md={1}>
+                                <Form.Group controlId="formGridName">
+                                    <Form.Control className="search-input" placeholder="Baths" type="text" name="baths" onChange={"/"}/>
+                                </Form.Group>
+                            </Col>
+                            <Col sm={6} md={2}>
+                                <Form.Group controlId="formGridName">
+                                    <Form.Control className="search-input" placeholder="# Min. Price" type="text" name="min_price" onChange={"/"}/>
+                                </Form.Group>
+                            </Col>
+                            <Col sm={6} md={2}>
+                                <Form.Group controlId="formGridName">
+                                    <Form.Control className="search-input" placeholder="$ Max. Price" type="text" name="max_price" onChange={"/"}/>
+                                </Form.Group>
+                            </Col>
+                            <Col sm={12} md={1}>
+                                <Button variant="light" type="submit" >
+                                    Search
+                                </Button>
+                            </Col>
+                        </Form.Row>
+                    </Form>
                 </Col>
             </Row>
         </Container>
